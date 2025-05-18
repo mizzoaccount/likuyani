@@ -23,27 +23,27 @@ export default function DonationSection() {
     { amount: 10000, text: "Funds a community health outreach for a month" },
   ];
 
-interface HandleDonateEvent extends React.FormEvent<HTMLFormElement> {}
+  interface HandleDonateEvent extends React.FormEvent<HTMLFormElement> {}
 
-const handleDonate = (e: HandleDonateEvent): void => {
+  const handleDonate = (e: HandleDonateEvent): void => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate payment processing
     setTimeout(() => {
-        setIsSubmitting(false);
-        setDonationSuccess(true);
-        
-        // Reset form after 5 seconds
-        setTimeout(() => {
-            setDonationSuccess(false);
-            setPhoneNumber('');
-            setEmail('');
-            setSelectedAmount(1000);
-            setCustomAmount('');
-        }, 5000);
+      setIsSubmitting(false);
+      setDonationSuccess(true);
+
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        setDonationSuccess(false);
+        setPhoneNumber('');
+        setEmail('');
+        setSelectedAmount(1000);
+        setCustomAmount('');
+      }, 5000);
     }, 2000);
-};
+  };
 
   const getImpactText = () => {
     if (selectedAmount === 0 && customAmount) {
@@ -61,31 +61,31 @@ const handleDonate = (e: HandleDonateEvent): void => {
   };
 
   return (
-    <section className="w-full bg-gray-50 py-20 relative overflow-hidden">
+    <section className="w-full bg-gray-50 py-12 md:py-20 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#b60808] opacity-5 mix-blend-multiply animate-blob"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-[#03ac56] opacity-5 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute -top-20 -left-20 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#b60808] opacity-5 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 -right-20 w-72 h-72 md:w-96 md:h-96 rounded-full bg-[#03ac56] opacity-5 mix-blend-multiply animate-blob animation-delay-3000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#b60808] via-[#fe0000] to-[#03ac56] animate-gradient">
               Support Our Cause
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Your donation empowers the Likuyani community through education, healthcare, and sustainable development
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12">
           {/* Donation Form */}
           <div className="lg:w-1/2">
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-              <div className="p-8">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl overflow-hidden">
+              <div className="p-6 sm:p-8">
                 {donationSuccess ? (
                   <div className="text-center py-8">
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -93,7 +93,7 @@ const handleDonate = (e: HandleDonateEvent): void => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Donation Successful!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Donation Successful!</h3>
                     <p className="text-gray-600 mb-6">Thank you for your generous support of {selectedAmount === 0 ? `${customAmount} KES` : `${selectedAmount} KES`}.</p>
                     <p className="text-sm text-gray-500">A confirmation has been sent to your {paymentMethod === 'mpesa' ? 'phone' : 'email'}.</p>
                   </div>
@@ -117,7 +117,7 @@ const handleDonate = (e: HandleDonateEvent): void => {
 
                     {/* Amount Selection */}
                     <div className="mb-8">
-                      <h3 className="text-lg font-semibold text-gray-800 mb-4">Select Amount (KES)</h3>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Select Amount (KES)</h3>
                       <div className="grid grid-cols-3 gap-3 mb-4">
                         {presetAmounts.slice(0, -1).map((amount) => (
                           <button
@@ -154,7 +154,7 @@ const handleDonate = (e: HandleDonateEvent): void => {
 
                     {/* Payment Method */}
                     <div className="mb-8">
-                      <h3 className="text-lg font-semibold text-gray-800 mb-4">Payment Method</h3>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Payment Method</h3>
                       <div className="flex gap-4">
                         <button
                           onClick={() => setPaymentMethod('mpesa')}
@@ -231,7 +231,7 @@ const handleDonate = (e: HandleDonateEvent): void => {
                           </span>
                         ) : (
                           `Donate ${selectedAmount === 0 ? customAmount || '___' : selectedAmount.toLocaleString()} KES ${donationType === 'recurring' ? 'Monthly' : 'Now'}`
-                        )}
+                                                  )}
                       </button>
                     </form>
                   </>
@@ -242,12 +242,12 @@ const handleDonate = (e: HandleDonateEvent): void => {
 
           {/* Impact Visualization */}
           <div className="lg:w-1/2">
-            <div className="bg-gradient-to-br from-[#03ac56] to-[#9ed462] rounded-3xl shadow-xl overflow-hidden h-full">
-              <div className="p-8 text-white h-full flex flex-col">
-                <h3 className="text-2xl font-bold mb-6">Your Impact</h3>
+            <div className="bg-gradient-to-br from-[#03ac56] to-[#9ed462] rounded-xl sm:rounded-2xl shadow-xl overflow-hidden h-full">
+              <div className="p-6 sm:p-8 text-white h-full flex flex-col">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-6">Your Impact</h3>
                 
                 <div className="flex-grow flex flex-col justify-center">
-                  <div className="text-5xl font-bold mb-6">
+                  <div className="text-4xl sm:text-5xl font-bold mb-6">
                     {selectedAmount === 0 ? (
                       customAmount ? (
                         <>{parseInt(customAmount).toLocaleString()} KES</>
@@ -259,7 +259,7 @@ const handleDonate = (e: HandleDonateEvent): void => {
                     )}
                   </div>
                   
-                  <div className="text-xl mb-8">
+                  <div className="text-xl sm:text-2xl mb-8">
                     {getImpactText()}
                   </div>
                   
@@ -329,6 +329,9 @@ const handleDonate = (e: HandleDonateEvent): void => {
         }
         .animation-delay-2000 {
           animation-delay: 2s;
+        }
+        .animation-delay-3000 {
+          animation-delay: 3s;
         }
       `}</style>
     </section>

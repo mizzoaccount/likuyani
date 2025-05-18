@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 
@@ -39,23 +40,23 @@ export default function GetInvolved() {
   const activeOption = involvementOptions.find(option => option.id === activeTab);
 
   return (
-    <section className="w-full bg-white py-20 relative overflow-hidden">
+    <section className="w-full bg-white py-12 md:py-20 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-[#b60808] opacity-10 mix-blend-multiply animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/4 -right-20 w-72 h-72 rounded-full bg-[#03ac56] opacity-10 mix-blend-multiply animate-blob"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-60 h-60 rounded-full bg-[#fe0000] opacity-10 mix-blend-multiply animate-blob animation-delay-4000"></div>
+        <div className="absolute -top-20 -left-20 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#b60808] opacity-10 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/4 -right-20 w-72 h-72 md:w-96 md:h-96 rounded-full bg-[#03ac56] opacity-10 mix-blend-multiply animate-blob"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#fe0000] opacity-10 mix-blend-multiply animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#b60808] via-[#fe0000] to-[#03ac56] animate-gradient">
               Get Involved
             </span>
           </h2>
-          <p className="text-lg text-gray-500 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-500 max-w-3xl mx-auto">
             Join us in empowering the Likuyani community through various engagement opportunities
           </p>
         </div>
@@ -116,22 +117,22 @@ export default function GetInvolved() {
         </div>
 
         {/* Stats Footer */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-          <div className="bg-gradient-to-br from-[#fe0000]/10 to-[#b60808]/10 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-3xl font-bold text-[#b60808] mb-2">250+</div>
-            <div className="text-gray-700">Active Volunteers</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-12">
+          <div className="bg-gradient-to-br from-[#fe0000]/10 to-[#b60808]/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:shadow-lg transition-all duration-300">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#b60808] mb-1 sm:mb-2">250+</div>
+            <div className="text-sm sm:text-base text-gray-700">Active Volunteers</div>
           </div>
-          <div className="bg-gradient-to-br from-[#9ed462]/10 to-[#03ac56]/10 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-3xl font-bold text-[#03ac56] mb-2">40+</div>
-            <div className="text-gray-700">Trusted Partners</div>
+          <div className="bg-gradient-to-br from-[#9ed462]/10 to-[#03ac56]/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:shadow-lg transition-all duration-300">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#03ac56] mb-1 sm:mb-2">40+</div>
+            <div className="text-sm sm:text-base text-gray-700">Trusted Partners</div>
           </div>
-          <div className="bg-gradient-to-br from-[#b60808]/10 to-[#fe0000]/10 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-3xl font-bold text-[#fe0000] mb-2">15+</div>
-            <div className="text-gray-700">Annual Interns</div>
+          <div className="bg-gradient-to-br from-[#b60808]/10 to-[#fe0000]/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:shadow-lg transition-all duration-300">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#fe0000] mb-1 sm:mb-2">15+</div>
+            <div className="text-sm sm:text-base text-gray-700">Annual Interns</div>
           </div>
-          <div className="bg-gradient-to-br from-[#03ac56]/10 to-[#9ed462]/10 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-3xl font-bold text-[#9ed462] mb-2">1K+</div>
-            <div className="text-gray-700">Network Members</div>
+          <div className="bg-gradient-to-br from-[#03ac56]/10 to-[#9ed462]/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:shadow-lg transition-all duration-300">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#9ed462] mb-1 sm:mb-2">1K+</div>
+            <div className="text-sm sm:text-base text-gray-700">Network Members</div>
           </div>
         </div>
       </div>

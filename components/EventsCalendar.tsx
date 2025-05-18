@@ -61,59 +61,48 @@ export default function EventsCalendar() {
     }
   ];
 
-interface HandleRSVPEvent extends React.FormEvent<HTMLFormElement> {}
-
-const handleRSVP = (event: HandleRSVPEvent): void => {
+  const handleRSVP = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // In a real implementation, you would send this data to your backend
     console.log('RSVP submitted:', formData);
     setRsvpSuccess(true);
     setTimeout(() => {
-        setSelectedEvent(null);
-        setRsvpSuccess(false);
-        setFormData({ name: '', email: '', phone: '' });
+      setSelectedEvent(null);
+      setRsvpSuccess(false);
+      setFormData({ name: '', email: '', phone: '' });
     }, 3000);
-};
+  };
 
-interface RSVPFormData {
-    name: string;
-    email: string;
-    phone: string;
-}
-
-interface InputChangeEvent extends React.ChangeEvent<HTMLInputElement> {}
-
-const handleInputChange = (e: InputChangeEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prev: RSVPFormData) => ({ ...prev, [name]: value }));
-};
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
-    <section className="w-full bg-gray-50 py-20 relative overflow-hidden">
+    <section className="w-full bg-gray-50 py-12 md:py-20 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#b60808] opacity-5 mix-blend-multiply animate-blob"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-[#03ac56] opacity-5 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute -top-20 -right-20 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#b60808] opacity-5 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 -left-20 w-72 h-72 md:w-96 md:h-96 rounded-full bg-[#03ac56] opacity-5 mix-blend-multiply animate-blob animation-delay-3000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#b60808] via-[#fe0000] to-[#03ac56] animate-gradient">
               Upcoming Events
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Join our community meetings, workshops, and campaigns
           </p>
         </div>
 
         {/* Events Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 md:mb-20">
           {events.map((event) => (
             <div key={event.id} className="group">
-              <div className="h-full bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col">
+              <div className="h-full bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col">
                 {/* Image with gradient overlay */}
                 <div className="relative aspect-video overflow-hidden">
                   <Image
@@ -131,9 +120,9 @@ const handleInputChange = (e: InputChangeEvent) => {
                 </div>
                 
                 {/* Content */}
-                <div className="p-6 flex-grow flex flex-col">
+                <div className="p-4 sm:p-6 flex-grow flex flex-col">
                   <div className="text-sm text-gray-500 mb-1">{event.date} • {event.time}</div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-[#b60808] transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 group-hover:text-[#b60808] transition-colors duration-300">
                     {event.title}
                   </h3>
                   <div className="text-sm text-gray-600 mb-3 flex items-center">
@@ -147,7 +136,7 @@ const handleInputChange = (e: InputChangeEvent) => {
                   <div className="flex justify-between items-center">
                     <button 
                       onClick={() => setSelectedEvent(event)}
-                      className="px-4 py-2 bg-gradient-to-r from-[#b60808] to-[#03ac56] text-white rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+                      className="px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-[#b60808] to-[#03ac56] text-white rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
                     >
                       RSVP Now
                     </button>
@@ -171,7 +160,7 @@ const handleInputChange = (e: InputChangeEvent) => {
         <div className="text-center">
           <Link 
             href="/events" 
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-[#b60808] to-[#03ac56] hover:from-[#fe0000] hover:to-[#9ed462] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-[#b60808] to-[#03ac56] hover:from-[#fe0000] hover:to-[#9ed462] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           >
             View All Events
             <svg className="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,13 +190,13 @@ const handleInputChange = (e: InputChangeEvent) => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">RSVP Confirmed!</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">RSVP Confirmed!</h3>
                 <p className="text-gray-600 mb-6">You're registered for <span className="font-semibold">{selectedEvent.title}</span></p>
                 <p className="text-sm text-gray-500">We've sent details to your email</p>
               </div>
             ) : (
               <>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Register for {selectedEvent.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Register for {selectedEvent.title}</h3>
                 <p className="text-gray-600 mb-6">{selectedEvent.date} • {selectedEvent.time}</p>
                 
                 <form onSubmit={handleRSVP}>
@@ -285,6 +274,9 @@ const handleInputChange = (e: InputChangeEvent) => {
         }
         .animation-delay-2000 {
           animation-delay: 2s;
+        }
+        .animation-delay-3000 {
+          animation-delay: 3s;
         }
       `}</style>
     </section>

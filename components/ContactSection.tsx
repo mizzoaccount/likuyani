@@ -1,39 +1,39 @@
-
 "use client"
+
 import React from 'react';
 
 export default function ContactSection() {
   return (
-    <section className="w-full bg-gray-50 py-20 relative overflow-hidden">
+    <section className="w-full bg-gray-50 py-12 md:py-20 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#b60808] opacity-5 mix-blend-multiply animate-blob"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-[#03ac56] opacity-5 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute -top-20 -left-20 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#b60808] opacity-5 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 -right-20 w-72 h-72 md:w-96 md:h-96 rounded-full bg-[#03ac56] opacity-5 mix-blend-multiply animate-blob animation-delay-3000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#b60808] via-[#fe0000] to-[#03ac56] animate-gradient">
               Contact Us
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Reach out to Likuyani Community Empowerment Organization
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-white rounded-2xl shadow-md p-8 h-full">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-md p-6 sm:p-8 h-full">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Get in Touch</h3>
               
               {/* Map */}
               <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.755575058426!2d34.98741531526171!3d0.2832995641070085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTcnMDAuMCJOIDM0wrA1OScyMS4xIkU!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.755575058426!2d34.98741531526171!3d0.2832995641070085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTcnMDAuMCJOIDM0wrA5OScyMS4xIkU!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske"
                   className="absolute inset-0 w-full h-full"
                   allowFullScreen
                   loading="lazy"
@@ -88,8 +88,8 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-md p-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-md p-6 sm:p-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Send a Message</h3>
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
@@ -151,6 +151,9 @@ export default function ContactSection() {
         }
         .animation-delay-2000 {
           animation-delay: 2s;
+        }
+        .animation-delay-3000 {
+          animation-delay: 3s;
         }
       `}</style>
     </section>

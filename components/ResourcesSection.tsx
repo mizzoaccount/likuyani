@@ -62,23 +62,23 @@ export default function ResourcesSection() {
   ];
 
   return (
-    <section className="w-full bg-white py-20 relative overflow-hidden">
+    <section className="w-full bg-white py-12 md:py-20 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-[#b60808] opacity-10 mix-blend-multiply animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/4 -right-20 w-72 h-72 rounded-full bg-[#03ac56] opacity-10 mix-blend-multiply animate-blob"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-60 h-60 rounded-full bg-[#fe0000] opacity-10 mix-blend-multiply animate-blob animation-delay-4000"></div>
+        <div className="absolute -top-20 -left-20 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#b60808] opacity-10 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/4 -right-20 w-72 h-72 md:w-96 md:h-96 rounded-full bg-[#03ac56] opacity-10 mix-blend-multiply animate-blob"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#fe0000] opacity-10 mix-blend-multiply animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#b60808] via-[#fe0000] to-[#03ac56] animate-gradient">
               Resources
             </span>
           </h2>
-          <p className="text-lg text-gray-500 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Access our reports, media, and informational materials
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function ResourcesSection() {
           {resources.map((resource) => (
             <div key={resource.id} className="group flex flex-col">
               {/* Resource Card */}
-              <div className={`${resource.height} bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-500 p-4 group relative overflow-hidden`}>
+              <div className={`${resource.height} bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-500 p-4 group relative overflow-hidden`}>
                 <div className={`absolute inset-0 bg-gradient-to-br ${resource.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                   <Image 
@@ -105,7 +105,7 @@ export default function ResourcesSection() {
               </div>
               
               {/* Action Button */}
-              <div className={`mt-4 bg-gradient-to-r ${resource.color} rounded-2xl p-4 flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}>
+              <div className={`mt-4 bg-gradient-to-r ${resource.color} rounded-xl sm:rounded-2xl p-4 flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}>
                 {resource.type === 'download' ? (
                   <a href="#" className="text-white font-medium text-lg inline-flex items-center">
                     Download
