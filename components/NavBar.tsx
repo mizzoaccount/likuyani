@@ -53,16 +53,16 @@ export default function Navbart() {
 {/* Mobile Menu */}
 {mobileMenuOpen && (
   <div className="absolute top-full left-0 w-full bg-white shadow-md z-40 flex flex-col gap-4 py-6 px-6 md:hidden">
-    <a href="#home" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#b60808] transition-colors duration-300">Home</a>
-    <a href="#about" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#fe0000] transition-colors duration-300">About Us</a>
-    <a href="#programs" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#03ac56] transition-colors duration-300">Programs</a>
-    <a href="#impact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#9ed462] transition-colors duration-300">Impact</a>
-    <a href="#get-involved" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f59e0b] transition-colors duration-300">Get Involved</a>
-    <a href="#donate" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6366f1] transition-colors duration-300">Donate</a>
-    <a href="#news" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#ec4899] transition-colors duration-300">News & Updates</a>
-    <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#10b981] transition-colors duration-300">Contact</a>
+    <a href="#home" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#b60808] transition-colors duration-300">Home</a>
+    <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#fe0000] transition-colors duration-300">About Us</a>
+    <a href="#programs" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#03ac56] transition-colors duration-300">Programs</a>
+    <a href="#impact" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#9ed462] transition-colors duration-300">Impact</a>
+    <a href="#get-involved" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#f59e0b] transition-colors duration-300">Get Involved</a>
+    <a href="#donate" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#6366f1] transition-colors duration-300">Donate</a>
+    <a href="#news" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#ec4899] transition-colors duration-300">News & Updates</a>
+    <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#10b981] transition-colors duration-300">Contact</a>
     <hr className="border-gray-200 my-2" />
-    <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-[#b60808] transition-colors duration-300">Log in</a>
+    <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-black hover:text-[#b60808] transition-colors duration-300">Log in</a>
     <a 
       href="#" 
       onClick={() => setMobileMenuOpen(false)}
@@ -72,6 +72,7 @@ export default function Navbart() {
     </a>
   </div>
 )}
+
 
       </div>
 

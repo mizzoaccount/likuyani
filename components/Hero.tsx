@@ -53,7 +53,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="mt-6 bg-gradient-to-r from-[#9ed462] to-[#03ac56] rounded-xl sm:rounded-2xl p-4 h-24 flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <p className="text-white font-medium text-lg">Let them be heard</p>
+              <p className="text-white font-medium text-lg">Driven by Passion</p>
             </div>
           </div>
 
@@ -116,7 +116,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="mt-6 bg-gradient-to-r from-[#fe0000] to-[#b60808] rounded-xl sm:rounded-2xl p-4 h-24 flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <p className="text-white font-medium text-lg">Your home of help</p>
+              <p className="text-white font-medium text-lg">Growing in Impact.</p>
             </div>
           </div>
         </div>
