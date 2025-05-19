@@ -50,7 +50,7 @@ export default function AbouttSection() {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative aspect-video rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl">
               <Image
-                src="https://scontent.fnbo17-1.fna.fbcdn.net/v/t39.30808-6/492124090_682220754448594_8474228620323638687_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeENFSSApgI_Fhab6HCzG_IESSEHAZfTA-5JIQcBl9MD7s4zyCoEhZHm3R9I1CzD3jnj-EymfJHeKkvQmQnODt5t&_nc_ohc=dCKIrgFKytsQ7kNvwEEbPly&_nc_oc=AdkFNLVq5DuIy6gyiC3FSwTQ1ffcgE3ogt1-T4TFil55zscbgHsVzMbQsRatWvjvyN4&_nc_zt=23&_nc_ht=scontent.fnbo17-1.fna&_nc_gid=Z0vlJvf1rfVAMHU78Ugr6Q&oh=00_AfIFkzskRyQCsTjLoK_LHtNdfritNHU61HBWha59lwkzUw&oe=6830185A"
+                src="/assets/asset6.jpg"
                 alt="LCEO Community Members"
                 fill
                 className="object-cover"
