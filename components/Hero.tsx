@@ -44,7 +44,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#b60808] to-[#03ac56] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image 
-                  src="/assets/asset1.jpg"
+                  src="/assets/asset7.jpeg"
                   alt="Team Collaboration"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -63,7 +63,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#fe0000] to-[#9ed462] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image 
-                  src="/assets/asset2.jpg"
+                  src="/assets/asset9.jpeg"
                   alt="Digital Calendar"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -78,7 +78,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#03ac56] to-[#b60808] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image 
-                  src="/assets/asset4.jpg"
+                  src="/assets/asset10.jpeg"
                   alt="Task Planning"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -93,7 +93,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#fe0000] to-[#9ed462] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image 
-                  src="/assets/asset3.jpg"
+                  src="/assets/asset11.jpeg"
                   alt="Event Planning"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -108,7 +108,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#b60808] to-[#03ac56] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image 
-                  src="/assets/asset5.jpg"
+                  src="/assets/asset8.jpeg"
                   alt="Support Chat"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
