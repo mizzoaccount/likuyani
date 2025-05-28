@@ -1,4 +1,5 @@
 // pages/index.tsx
+
 import Hero from '@/components/Hero';
 import Navbart from '@/components/NavBar';
 import AbouttSection from '@/components/Aboutt';
@@ -10,6 +11,7 @@ import DonationSection from '@/components/DonationSection';
 import ResourcesSection from '@/components/ResourcesSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import TopHero from '@/components/TopHero';
 
 export default function Home() {
   return (
@@ -17,6 +19,7 @@ export default function Home() {
      
       <main>
        <Navbart />
+       <TopHero />
         <Hero />
         <AbouttSection />
         <ThematicAreas />

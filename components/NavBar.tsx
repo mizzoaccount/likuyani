@@ -32,7 +32,8 @@ export default function Navbart() {
 
         {/* Desktop Nav Links */}
       <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
-        <a href="#about" className="hover:text-[#fe0000] transition-colors duration-300">About Us</a>
+         <a href="/" className="hover:text-[#9ed462] transition-colors duration-300">Home</a>
+        <a href="/about" className="hover:text-[#fe0000] transition-colors duration-300">About Us</a>
         <a href="#programs" className="hover:text-[#03ac56] transition-colors duration-300">Programs</a>
         <a href="#impact" className="hover:text-[#9ed462] transition-colors duration-300">Impact</a>
         <a href="#get-involved" className="hover:text-[#fe0000] transition-colors duration-300">Get Involved</a>
