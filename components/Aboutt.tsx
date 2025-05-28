@@ -47,21 +47,29 @@ export default function AbouttSection() {
 
         {/* Content with Image */}
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
-          <div className="w-full lg:w-1/2 relative">
+          <div className="w-full lg:w-1/2 relative"> {/* Added lg:mt-8 to move image down on larger screens */}
             <div className="relative aspect-video rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl">
-              <Image
+             {/*} <Image
                 src="/assets/asset12.jpeg"
                 alt="LCEO Community Members"
                 fill
-                className="object-cover"
+                className=""
                 priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              />*/}
+<Image
+  src="/assets/asset12.jpeg"
+  alt="LCEO Community Members"
+  fill
+  className="objtect-cover object-bottom" // Zoom out to 90%
+  priority
+/>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
             {/* Responsive "Since 2008" card */}
             <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-bottom-6 md:-right-6 bg-gradient-to-r from-[#b60808] to-[#fe0000] p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl md:rounded-2xl shadow-md sm:shadow-lg w-2/3 sm:w-3/4 md:w-2/3">
               <div className="bg-white p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl text-center">
-                <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#b60808]">Since 2008</div>
+                <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#b60808]">Since 2019</div>
                 <div className="text-xs sm:text-sm text-gray-600">Serving Likuyani Sub-County</div>
               </div>
             </div>

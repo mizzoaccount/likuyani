@@ -47,7 +47,7 @@ export default function Hero() {
                   src="/assets/asset7.jpeg"
                   alt="Team Collaboration"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   priority
                 />
               </div>
@@ -66,7 +66,7 @@ export default function Hero() {
                   src="/assets/asset9.jpeg"
                   alt="Digital Calendar"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function Hero() {
                   src="/assets/asset11.jpeg"
                   alt="Event Planning"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function Hero() {
                   src="/assets/asset8.jpeg"
                   alt="Support Chat"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
