@@ -28,7 +28,7 @@ export default function AbouttSection() {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 md:mb-20">
           <div className="bg-gradient-to-br from-[#fe0000]/10 to-[#b60808]/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#b60808] mb-1 sm:mb-2">15+</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#b60808] mb-1 sm:mb-2">5+</div>
             <div className="text-sm sm:text-base text-gray-700">Years of Service</div>
           </div>
           <div className="bg-gradient-to-br from-[#9ed462]/10 to-[#03ac56]/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:shadow-lg transition-all duration-300">
@@ -50,7 +50,7 @@ export default function AbouttSection() {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative aspect-video rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl">
               <Image
-                src="/assets/asset6.jpg"
+                src="/assets/asset12.jpeg"
                 alt="LCEO Community Members"
                 fill
                 className="object-cover"
@@ -70,7 +70,7 @@ export default function AbouttSection() {
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-800">Our Story</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
-              Founded in 2008, Likuyani Community Empowerment Organization (LCEO) began as a small grassroots initiative 
+              Founded in 2019, Likuyani Community Empowerment Organization (LCEO) began as a small grassroots initiative 
               addressing education disparities in Western Kenya. Today, we've grown into a comprehensive community 
               development organization impacting thousands annually.
             </p>
