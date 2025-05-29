@@ -108,7 +108,7 @@ export default function TopHero() {
                 transition={{ delay: 0.4, duration: 0.7 }}
               >
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#b60808] via-[#fe0000] to-[#03ac56] animate-gradient">
-                  Empowering Likuyani<br />
+                  Empowering Kakamega County<br />
                   <span className="text-gray-800">Through Community Action</span>
                 </span>
               </motion.h1>
