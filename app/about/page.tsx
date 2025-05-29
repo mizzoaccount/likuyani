@@ -1,11 +1,13 @@
 "use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Navbart from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import { UnderConstructionModal } from '@/components/ConstructionModal';
 
 export default function AboutPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
         <Navbart />
@@ -269,7 +271,9 @@ export default function AboutPage() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="px-8 py-3 bg-gradient-to-r from-[#b60808] to-[#03ac56] text-white rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <button className="px-8 py-3 bg-gradient-to-r from-[#b60808] to-[#03ac56] text-white rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+            onClick={() => setIsModalOpen(true)}
+            >
               View Full Leadership Team
             </button>
           </div>
@@ -459,6 +463,14 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+            <UnderConstructionModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Feature Under Development"
+        message="This feature is currently under development and will be available soon."
+        featureName="The Feature"
+        estimatedCompletion="in a few so soon..."
+      />
 
       {/* Animation styles */}
       <style jsx global>{`

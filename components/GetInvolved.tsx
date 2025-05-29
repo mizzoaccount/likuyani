@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { UnderConstructionModal } from './ConstructionModal';
 
 export default function GetInvolved() {
   const [activeTab, setActiveTab] = useState('volunteer');
-  
+    const [isModalOpen, setIsModalOpen] = useState(false);
   const involvementOptions = [
     {
       id: 'volunteer',
@@ -103,10 +104,14 @@ export default function GetInvolved() {
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{activeOption.title}</h3>
                   <p className="text-white/90 mb-6">{activeOption.description}</p>
                   <div className="flex flex-wrap gap-4">
-                    <button className="px-6 py-2 bg-white text-gray-800 rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <button className="px-6 py-2 bg-white text-gray-800 rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                      onClick={() => setIsModalOpen(true)}
+                    >
                       Learn More
                     </button>
-                    <button className={`px-6 py-2 bg-gradient-to-r ${activeOption.color} text-white rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
+                    <button className={`px-6 py-2 bg-gradient-to-r ${activeOption.color} text-white rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                      onClick={() => setIsModalOpen(true)}
+                    >
                       Apply Now
                     </button>
                   </div>
@@ -116,7 +121,7 @@ export default function GetInvolved() {
           )}
         </div>
 
-        {/* Stats Footer */}
+        {/* Stats Footer *
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-12">
           <div className="bg-gradient-to-br from-[#fe0000]/10 to-[#b60808]/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:shadow-lg transition-all duration-300">
             <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#b60808] mb-1 sm:mb-2">250+</div>
@@ -134,8 +139,68 @@ export default function GetInvolved() {
             <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#9ed462] mb-1 sm:mb-2">1K+</div>
             <div className="text-sm sm:text-base text-gray-700">Network Members</div>
           </div>
-        </div>
+        </div>*/}
+        {/* Stats Footer */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-12">
+  {/* Stat Card 1 */}
+  <div className="relative group overflow-hidden p-0.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#fe0000] to-[#b60808] hover:shadow-lg transition-all duration-500">
+    <div className="relative h-full bg-white rounded-xl sm:rounded-[15px] p-4 sm:p-6 text-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fe0000]/5 to-[#b60808]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#b60808] mb-1 sm:mb-2 drop-shadow-sm">250+</div>
+        <div className="text-sm sm:text-base text-gray-700 font-medium">Active Volunteers</div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#fe0000] to-[#b60808] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  </div>
+
+  {/* Stat Card 2 */}
+  <div className="relative group overflow-hidden p-0.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#9ed462] to-[#03ac56] hover:shadow-lg transition-all duration-500">
+    <div className="relative h-full bg-white rounded-xl sm:rounded-[15px] p-4 sm:p-6 text-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#9ed462]/5 to-[#03ac56]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#03ac56] mb-1 sm:mb-2 drop-shadow-sm">40+</div>
+        <div className="text-sm sm:text-base text-gray-700 font-medium">Trusted Partners</div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9ed462] to-[#03ac56] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  </div>
+
+  {/* Stat Card 3 */}
+  <div className="relative group overflow-hidden p-0.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#b60808] to-[#fe0000] hover:shadow-lg transition-all duration-500">
+    <div className="relative h-full bg-white rounded-xl sm:rounded-[15px] p-4 sm:p-6 text-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#b60808]/5 to-[#fe0000]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#fe0000] mb-1 sm:mb-2 drop-shadow-sm">15+</div>
+        <div className="text-sm sm:text-base text-gray-700 font-medium">Annual Interns</div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#b60808] to-[#fe0000] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  </div>
+
+  {/* Stat Card 4 */}
+  <div className="relative group overflow-hidden p-0.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#03ac56] to-[#9ed462] hover:shadow-lg transition-all duration-500">
+    <div className="relative h-full bg-white rounded-xl sm:rounded-[15px] p-4 sm:p-6 text-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#03ac56]/5 to-[#9ed462]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#9ed462] mb-1 sm:mb-2 drop-shadow-sm">1K+</div>
+        <div className="text-sm sm:text-base text-gray-700 font-medium">Network Members</div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#03ac56] to-[#9ed462] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  </div>
+</div>
+      </div>
+
+      
+                  <UnderConstructionModal 
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+              title="Feature Under Development"
+              message="This feature is currently under development and will be available soon."
+              featureName="Thematic details"
+              estimatedCompletion="in a few so soon..."
+            />
 
       {/* Animation styles */}
       <style jsx global>{`

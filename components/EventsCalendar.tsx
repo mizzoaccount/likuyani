@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { UnderConstructionModal } from './ConstructionModal';
 
 type EventType = {
   id: number;
@@ -19,6 +20,7 @@ type EventType = {
 export default function EventsCalendar() {
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
   const [rsvpSuccess, setRsvpSuccess] = useState(false);
+   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -140,15 +142,15 @@ export default function EventsCalendar() {
                     >
                       RSVP Now
                     </button>
-                    <Link 
-                      href={`/events/${event.id}`} 
+                    <div
                       className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-[#b60808] to-[#03ac56] font-medium inline-flex items-center"
+                    onClick={() => setIsModalOpen(true)}
                     >
                       More details
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                    </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -242,6 +244,7 @@ export default function EventsCalendar() {
                   <button
                     type="submit"
                     className="w-full mt-6 px-6 py-3 bg-gradient-to-r from-[#b60808] to-[#03ac56] text-white rounded-full hover:shadow-lg transition-all duration-300"
+                  onClick={() => setIsModalOpen(true)}
                   >
                     Confirm RSVP
                   </button>
@@ -251,6 +254,14 @@ export default function EventsCalendar() {
           </div>
         </div>
       )}
+            <UnderConstructionModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Feature Under Development"
+        message="This feature is currently under development and will be available soon."
+        featureName="The Feature"
+        estimatedCompletion="in a few so soon..."
+      />
 
       {/* Animation styles */}
       <style jsx global>{`

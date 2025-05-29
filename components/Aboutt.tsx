@@ -2,10 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AbouttSection() {
   return (
-    <section className="w-full bg-white py-12 md:py-20 relative overflow-hidden">
+    <section className="w-full bg-white py-12 md:py-8 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -right-20 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#9ed462] opacity-5 mix-blend-multiply animate-blob"></div>
@@ -25,7 +26,7 @@ export default function AbouttSection() {
           </p>
         </div>
 
-        {/* Stats Grid */}
+        {/* Stats Grid *
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 md:mb-20">
           <div className="bg-gradient-to-br from-[#fe0000]/10 to-[#b60808]/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:shadow-lg transition-all duration-300">
             <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#b60808] mb-1 sm:mb-2">5+</div>
@@ -43,7 +44,58 @@ export default function AbouttSection() {
             <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#9ed462] mb-1 sm:mb-2">200+</div>
             <div className="text-sm sm:text-base text-gray-700">Local Volunteers</div>
           </div>
-        </div>
+        </div>*/}
+
+        {/* Stats Grid */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 md:mb-20">
+  {/* Stat Card 1 */}
+  <div className="relative group overflow-hidden p-0.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#fe0000] to-[#b60808] hover:shadow-lg transition-all duration-500">
+    <div className="relative h-full bg-white rounded-xl sm:rounded-[15px] p-4 sm:p-6 text-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fe0000]/5 to-[#b60808]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#b60808] mb-1 sm:mb-2 drop-shadow-sm">5+</div>
+        <div className="text-sm sm:text-base text-gray-700 font-medium">Years of Service</div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#fe0000] to-[#b60808] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  </div>
+
+  {/* Stat Card 2 */}
+  <div className="relative group overflow-hidden p-0.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#9ed462] to-[#03ac56] hover:shadow-lg transition-all duration-500">
+    <div className="relative h-full bg-white rounded-xl sm:rounded-[15px] p-4 sm:p-6 text-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#9ed462]/5 to-[#03ac56]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#03ac56] mb-1 sm:mb-2 drop-shadow-sm">50+</div>
+        <div className="text-sm sm:text-base text-gray-700 font-medium">Community Projects</div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9ed462] to-[#03ac56] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  </div>
+
+  {/* Stat Card 3 */}
+  <div className="relative group overflow-hidden p-0.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#b60808] to-[#fe0000] hover:shadow-lg transition-all duration-500">
+    <div className="relative h-full bg-white rounded-xl sm:rounded-[15px] p-4 sm:p-6 text-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#b60808]/5 to-[#fe0000]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#fe0000] mb-1 sm:mb-2 drop-shadow-sm">10K+</div>
+        <div className="text-sm sm:text-base text-gray-700 font-medium">Lives Impacted</div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#b60808] to-[#fe0000] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  </div>
+
+  {/* Stat Card 4 */}
+  <div className="relative group overflow-hidden p-0.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#03ac56] to-[#9ed462] hover:shadow-lg transition-all duration-500">
+    <div className="relative h-full bg-white rounded-xl sm:rounded-[15px] p-4 sm:p-6 text-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#03ac56]/5 to-[#9ed462]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#9ed462] mb-1 sm:mb-2 drop-shadow-sm">200+</div>
+        <div className="text-sm sm:text-base text-gray-700 font-medium">Local Volunteers</div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#03ac56] to-[#9ed462] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  </div>
+</div>
 
         {/* Content with Image */}
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
@@ -115,9 +167,11 @@ export default function AbouttSection() {
               </div>
             </div>
 
-            <button className="mt-6 sm:mt-8 px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-[#b60808] to-[#03ac56] text-white text-sm sm:text-base rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-              Learn More About Our Work
-            </button>
+               <Link href="/about">
+              <button className="mt-6 sm:mt-8 px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-[#b60808] to-[#03ac56] text-white text-sm sm:text-base rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
+                Learn More About Our Work
+              </button>
+            </Link>
           </div>
         </div>
       </div>

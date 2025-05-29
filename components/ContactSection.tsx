@@ -1,8 +1,9 @@
 "use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function ContactSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="w-full bg-gray-50 py-12 md:py-20 relative overflow-hidden">
       {/* Animated background elements */}
@@ -52,7 +53,10 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-700">Phone</h4>
-                    <a href="tel:0727434732" className="text-gray-600 hover:text-[#b60808] transition-colors">0727 434 732</a>
+                    
+                      <a href="tel:0711394908" className="text-gray-600 hover:text-[#b60808] transition-colors">0711 394 908</a><br />
+                        <a href="tel:0711394827" className="text-gray-600 hover:text-[#b60808] transition-colors">0711 394 827</a><br />
+                        <a href="tel:0727434732" className="text-gray-600 hover:text-[#b60808] transition-colors">0727 434 732</a>
                   </div>
                 </div>
 
@@ -121,6 +125,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 className="w-full py-3 px-6 bg-gradient-to-r from-[#b60808] to-[#fe0000] text-white rounded-full hover:shadow-lg transition-all duration-300"
+                  onClick={() => setIsModalOpen(true)}
               >
                 Send Message
               </button>

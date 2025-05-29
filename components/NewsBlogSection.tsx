@@ -146,11 +146,13 @@ export default function NewsBlogSection() {
 
 "use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { UnderConstructionModal } from '@/components/ConstructionModal';
 
 export default function NewsBlogSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const articles = [
     {
       id: 1,
@@ -231,15 +233,15 @@ export default function NewsBlogSection() {
                     {article.title}
                   </h3>
                   <p className="text-gray-600 mb-6 flex-grow">{article.excerpt}</p>
-                  <Link 
-                    href={`/news/${article.id}`} 
+                  <div
+                    onClick={() => setIsModalOpen(true)}
                     className="text-transparent bg-clip-text bg-gradient-to-r from-[#b60808] to-[#03ac56] font-medium inline-flex items-center self-start"
                   >
                     Read more
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
-                  </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -248,17 +250,26 @@ export default function NewsBlogSection() {
 
         {/* View All Button */}
         <div className="text-center">
-          <Link 
-            href="/news" 
+          <div
+            onClick={() => setIsModalOpen(true)}
             className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-[#b60808] to-[#03ac56] hover:from-[#fe0000] hover:to-[#9ed462] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           >
             View All Articles
             <svg className="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </Link>
+          </div>
         </div>
       </div>
+
+            <UnderConstructionModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Feature Under Development"
+        message="This feature is currently under development and will be available soon."
+        featureName="The Feature"
+        estimatedCompletion="in a few so soon..."
+      />
 
       {/* Animation styles */}
       <style jsx global>{`

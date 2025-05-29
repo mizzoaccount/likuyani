@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { UnderConstructionModal } from './ConstructionModal';
 
 export default function TopHero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   // Community images for the carousel
   const communityImages = [
@@ -14,7 +16,17 @@ export default function TopHero() {
     "/assets/asset10.jpeg",
     "/assets/asset11.jpeg",
     "/assets/asset8.jpeg",
-    "/assets/asset12.jpeg"
+    "/assets/asset12.jpeg",
+    "/assets/asset22.jpeg",
+    "/assets/asset23.jpeg",
+    "/assets/asset24.jpeg",
+   "/assets/asset25.jpeg",
+    "/assets/asset26.jpeg",
+    "/assets/asset27.jpeg",
+    "/assets/asset28.jpeg",
+    "/assets/asset29.jpeg",
+    "/assets/asset30.jpeg",
+    "/assets/asset32.jpeg",
   ];
   
   // Carousel titles
@@ -117,10 +129,14 @@ export default function TopHero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.7 }}
             >
-              <button className="px-8 py-3 bg-gradient-to-r from-[#b60808] to-[#fe0000] text-white rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 font-medium">
+              <button className="px-8 py-3 bg-gradient-to-r from-[#b60808] to-[#fe0000] text-white rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 font-medium"
+                onClick={() => setIsModalOpen(true)}
+                >
                 Join Our Mission
               </button>
-              <button className="px-8 py-3 bg-white border-2 border-[#03ac56] text-[#03ac56] rounded-full hover:bg-[#03ac56]/10 transition-all duration-300 font-medium flex items-center gap-2">
+              <button className="px-8 py-3 bg-white border-2 border-[#03ac56] text-[#03ac56] rounded-full hover:bg-[#03ac56]/10 transition-all duration-300 font-medium flex items-center gap-2"
+                onClick={() => setIsModalOpen(true)}
+                >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                 </svg>
@@ -260,6 +276,15 @@ export default function TopHero() {
           </motion.div>
         </div>
       </div>
+
+      <UnderConstructionModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Feature Under Development"
+        message="This feature is currently under development and will be available soon."
+        featureName="The Feature"
+        estimatedCompletion="in a few so soon..."
+      />
 
       {/* Animation styles */}
       <style jsx global>{`
