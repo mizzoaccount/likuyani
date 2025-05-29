@@ -19,7 +19,7 @@ export default function Footer() {
               <h3 className="text-xl font-bold">L.C.E.O</h3>
             </div>
             <p className="text-gray-400 mb-6">
-              Empowering the Likuyani community through sustainable development, education, and healthcare initiatives.
+              Empowering likuyani community through good governance, sustainable development, education and healthcare initiative and youth and women empowerment.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/share/1ASm36CbW7/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#1877F2] transition-colors">
