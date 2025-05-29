@@ -119,7 +119,7 @@ export default function TopHero() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.7 }}
               >
-                Likuyani Community Empowerment Organization (LCEO) is a grassroots initiative dedicated to creating sustainable change in Western Kenya. Through collaborative efforts, we're building a future where every community member has access to education, healthcare, and economic opportunities.
+               Building Resilient Communities Through Education, Health, Economic Empowerment, and Good Governance. Likuyani Community Empowerment Organization (LCEO) is a grassroots initiative born out of the urgent need to address systemic challenges facing communities in Western Kenya. Founded on the belief that sustainable change begins at the local level, LCEO empowers individuals and families by promoting access to quality education, improved healthcare services, and inclusive economic opportunities. At the heart of our mission is a commitment to strengthening leadership and governance structures, ensuring that communities are not only beneficiaries of development but active participants in shaping their future. Through collaboration, transparency, and deep community engagement, we are building a future where every person—regardless of background—can thrive, lead, and contribute meaningfully to society.
               </motion.p>
             </div>
             
