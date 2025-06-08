@@ -331,17 +331,6 @@ export default function Hero() {
           Join us in making a difference and building a brighter future for all.
         </p>
 
-        {/* Top Buttons - Centered with enhanced hover effects *
-        <div className="flex justify-center gap-4 mb-8">
-          <button className="relative overflow-hidden bg-gray-200 text-gray-800 px-6 py-2 rounded-full hover:bg-gray-300 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-            <span className="relative z-10">Volunteer</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#9ed462] to-[#03ac56] opacity-0 hover:opacity-20 transition-opacity duration-300"></span>
-          </button>
-          <button className="relative overflow-hidden bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
-            <span className="relative z-10">Our Impact</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#fe0000] to-[#b60808] opacity-0 group-hover:opacity-30 transition-opacity duration-300"></span>
-          </button>
-        </div>*/}
 
          <div className="flex justify-center gap-4 mb-8">
       <button
@@ -480,42 +469,42 @@ export default function Hero() {
               <p className="text-white font-medium text-lg">Growing in Impact.</p>
             </div>*/}
             <div 
-  className="mt-6 relative group cursor-pointer overflow-hidden"
- onClick={() => setIsModalOpen(true)}
->
-  <div className="absolute inset-0 bg-gradient-to-r from-[#fe0000] to-[#b60808] rounded-xl sm:rounded-2xl shadow-md transition-all duration-500" />
-  
-  {/* Inner border effect */}
-  <div className="absolute inset-0.5 border-2 border-white rounded-xl sm:rounded-2xl pointer-events-none" />
-  
-  <div className="relative h-24 flex items-center justify-between px-6 sm:px-8">
-    <p className="text-white font-medium text-lg md:text-xl z-10">Growing in Impact.</p>
-    
-    {/* Animated arrow icon */}
-    <div className="relative z-10 w-8 h-8 flex items-center justify-center">
-      <svg 
-        className="w-5 h-5 text-white transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" 
-        fill="none" 
-        viewBox="0 0 24 24" 
-        stroke="currentColor"
-      >
-        <path 
-          strokeLinecap="round" 
-          strokeLinejoin="round" 
-          strokeWidth={2} 
-          d="M14 5l7 7m0 0l-7 7m7-7H3" 
-        />
-      </svg>
-      <div className="absolute inset-0 border-2 border-white/30 rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300" />
-    </div>
-  </div>
-  
-  {/* Hover overlay effect */}
-  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-  
-  {/* Responsive touch feedback */}
-  <div className="absolute inset-0 active:bg-white/10 md:active:bg-transparent" />
-</div>
+                className="mt-6 relative group cursor-pointer overflow-hidden"
+              onClick={() => setIsModalOpen(true)}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[#fe0000] to-[#b60808] rounded-xl sm:rounded-2xl shadow-md transition-all duration-500" />
+                
+                {/* Inner border effect */}
+                <div className="absolute inset-0.5 border-2 border-white rounded-xl sm:rounded-2xl pointer-events-none" />
+                
+                <div className="relative h-24 flex items-center justify-between px-6 sm:px-8">
+                  <p className="text-white font-medium text-lg md:text-xl z-10">Growing in Impact.</p>
+                  
+                  {/* Animated arrow icon */}
+                  <div className="relative z-10 w-8 h-8 flex items-center justify-center">
+                    <svg 
+                      className="w-5 h-5 text-white transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                      />
+                    </svg>
+                    <div className="absolute inset-0 border-2 border-white/30 rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300" />
+                  </div>
+                </div>
+                
+                {/* Hover overlay effect */}
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Responsive touch feedback */}
+                <div className="absolute inset-0 active:bg-white/10 md:active:bg-transparent" />
+              </div>
             <p className="mt-4 text-center text-gray-600 italic">The organisation Chairperson and the organization secretary attending a well planned event of one of the leading partner Siasa Place cel;ebrating 10 years of service to the community.</p>
           </div>
         </div>
@@ -597,33 +586,18 @@ export default function Hero() {
               </div>
               <p className="mt-4 text-center text-gray-600 italic">Likuyani community Empowerment Organization is a member of the National water parliament where young people champion for matter water, sanitation and hygiene.</p>
             </div>
-
-            {/* Image 6 *
-            <div className="flex flex-col">
-              <div className="relative aspect-[4/5] bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-500 p-4 group overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#fe0000] to-[#03ac56] opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
-                <Image 
-                  src="/assets/asset6.jpeg"
-                  alt="Volunteer Team"
-                  fill
-                  className="object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <p className="mt-4 text-center text-gray-600">Our dedicated volunteers making change happen on the ground.</p>
-            </div>*/}
           </div>
         </div>
       </div>
 
       <UnderConstructionModal 
-  isOpen={isModalOpen}
-  onClose={() => setIsModalOpen(false)}
-  title="Feature Under Development"
-  message="This feature is currently under development and will be available soon."
-  featureName="The Feature"
-  estimatedCompletion="in a few so soon..."
-/>
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Feature Under Development"
+        message="This feature is currently under development and will be available soon."
+        featureName="The Feature"
+        estimatedCompletion="in a few so soon..."
+      />
 
       {/* Add these styles to your global CSS or CSS-in-JS */}
       <style jsx global>{`
