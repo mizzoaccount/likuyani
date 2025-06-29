@@ -8,7 +8,6 @@ import { ProfileHeader } from "@/components/profile/ProfileHeader";
 import { ProfileTabs } from "@/components/profile/ProfileTabs";
 import { ProfileInfoSection } from "@/components/profile/ProfileInfoSection";
 import { ProfileEditForm } from "@/components/profile/ProfileEditForm";
-import { OrderList } from "@/components/profile/OrderList";
 import { AdminTable } from "@/components/profile/AdminTable";
 import { ProductModal } from "@/components/profile/ProductModal";
 import useProducts from "@/utils/useProducts";
@@ -17,21 +16,6 @@ import { useRouter } from "next/navigation";
 import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
-interface Product {
-  _id: string;
-  name: string;
-  designer: string;
-  category: {
-    main: string;
-    sub: string;
-    brand: string;
-  };
-  price: number;
-  stock: number;
-  images: string[];
-  attributes: Record<string, string>;
-  createdAt: string;
-}
 
 interface Order {
   id: string;
